@@ -198,6 +198,7 @@ git clone -b master --depth 1 https://github.com/garypang13/luci-theme-edge.git 
 cp -rf ../openwrt-lienol/package/diy/luci-app-adguardhome ./package/new/luci-app-adguardhome
 svn co https://github.com/openwrt/packages/trunk/net/adguardhome feeds/packages/net/adguardhome
 ln -sf ../../../feeds/packages/net/adguardhome ./package/feeds/packages/adguardhome
+sed -i '/init/d' feeds/packages/net/adguardhomeMakefile
 svn co https://github.com/openwrt/packages/trunk/devel/packr feeds/packages/devel/packr
 ln -sf ../../../feeds/packages/devel/packr ./package/feeds/packages/packr
 #cp -rf ../openwrt-lienol/package/diy/adguardhome ./package/new/adguardhome
